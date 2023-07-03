@@ -1,0 +1,7 @@
+#cardsPrint{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px;
+}.card-img-top{
+    height: 200px !important;
+}
