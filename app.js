@@ -1,59 +1,81 @@
-let mainNav = document.querySelector(".main-container");
-let navbar = document.querySelector(".display");
 
-mainNav.style.height = "80px"
-console.log(mainNav.style.height)
-let responsive = document.querySelector(".responsive")
-navbar.addEventListener("click", () => {
-  if (mainNav.style.height == "80px") {
+let sellBtn = document.querySelector(".sell-btn");
+if(sellBtn){
 
-    document.querySelector(".responsiveness").innerHTML = `
-        <div class="fa-cars icon-car"><i class="fa-solid  fa-car"></i><span class="name">MOTORS</span></div>
-        <div class="fa-build icon-car"><i class="fa-solid fa-building"></i><span class="name">PROPERTY</span></div>
-    
-        <div class="input">
-          <input type="text" class="head-input">
-          <span class="magnify-glass"><i class="fa-solid fa-magnifying-glass"></i></span>
-    
-        </div>
-        <button class="sell-btn">+ Sell</button>
-        `
-    let input = document.querySelector(".input");
-    let faCar = document.querySelector(".fa-cars");
-    let faBuild = document.querySelector(".fa-build");
-    let sellBtn = document.querySelector(".sell-btn");
-    let mainContainer = document.querySelector(".main-container")
-    mainNav.style.height = "160px";
-    input.style.display = "block";
-    mainNav.style.position = "absolute !important"
-// document.querySelector(".cra").style.position = "absolute !important"
-    faCar.style.display = "block";
-    sellBtn.style.display = "block"
-    mainNav.style.transition = "0.5s"
-    faBuild.style.display = "block"
+sellBtn.addEventListener("click", () => {
+// alert()
+  window.location.assign("SelectCatagri.html")
+})
+}
+else{
+let back = document.querySelector("#back");
+back.addEventListener("click",()=>{
+  history.back()
+
+})
+
+//   let postCard = document.querySelector("#imgListner")
+
+//   postCard.addEventListener("click", () => {
+
+//     mainNav.style.display = "block"
+//     document.querySelector(".cra").style.display = "block"
+//     document.querySelector(".image-catagized").style.display = "block"
+//     postCard1.style.display = "none"
+//   })
+//   let mobiles = document.querySelector("#mobiles");
+
+//   mobiles.addEventListener("click", () => {
+//     // mainNav.style.display = "none"
+//     let choseCatagri = document.querySelector(".choseCatagri")
+//     choseCatagri.style.display = "none"
+//     let back = document.querySelector("#back")
+//     back.innerHTML = `
+// <img id="imgListne" class="olx-logo" height="30px" src="./images/th.jpg">
+// `
+//     let baksBaks = document.querySelector("#imgListne")
+//     console.log(baksBaks)
+//     let form = document.querySelector(".table")
+//     // form.innerHTML = `
+//     // <div class="form-mobiles">
+//     // <table><th>
+//     // INCLUDE SOME DETAILS</th>
+//     // <tr><td>Ad title
+//     // </div>
+//     // `
+//     baksBaks.addEventListener("click", () => {
+//       alert()
+      
+//       // let choseCatagris = document.querySelector(".table")
+
+//       choseCatagri.style.display = "block"
+
+//       // let formMobiles = document.querySelector(".form-mobiles");
+//       // formMobiles.style.display = "none"
+//       // console.log(formMobiles)
+//       // console.log(choseCatagri)
+//       back.innerHTML = `
+// <img id="imgListner" class="olx-logo" height="30px" src="./images/th.jpg">
+// `
 
 
-  }
 
-  else if (mainNav.style.height !== "80px") {
-    document.querySelector(".responsiveness").innerHTML = `
-        <div class="fa-cars icon-car"><i class="fa-solid  fa-car"></i><span class="name">MOTORS</span></div>
-        <div class="fa-build icon-car"><i class="fa-solid fa-building"></i><span class="name">PROPERTY</span></div>
-    
-        <div class="input">
-          <input type="text" class="head-input">
-          <span class="magnify-glass"><i class="fa-solid fa-magnifying-glass"></i></span>
-    
-        </div>
-        <button class="sell-btn">+ Sell</button>
-        `
-    let mainNav = document.querySelector(".main-container");
-    mainNav.style.height = "10px"
-    console.log(mainNav.style.height)
-    mainNav.style.height = "80px";
-    mainNav.style.transition = "0.5s"
-    faCar.style.display = "none"
-    sellBtn.style.display = "none"
-    faBuild.style.display = "none"
-  }
-});
+//       let postCard = document.querySelector("#imgListner")
+//       postCard.addEventListener("click", () => {
+
+//         mainNav.style.display = "block"
+//         document.querySelector(".cra").style.display = "block"
+//         document.querySelector(".image-catagized").style.display = "block"
+//         postCard1.style.display = "none"
+//       })
+
+//       // document.querySelector(".cra").style.display = "block"
+//       // document.querySelector(".image-catagized").style.display = "block"
+//       // postCard1.style.display = "none"
+//     })
+
+//   })
+// })
+
+
+}

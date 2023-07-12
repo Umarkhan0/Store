@@ -4,12 +4,6 @@
     box-sizing: border-box;
 }
 
-.main-container {
-    height: 80px;
-    width: 100%;
-    background-color: aliceblue;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
 
 ._5afdd59e,
 .fa-bars {
@@ -33,67 +27,80 @@
 }
 
 .magnify-glass {
-    position: absolute;
+  margin-right: 20px;
     padding: 3.4px 10px;
     background-color: bisque;
     cursor: pointer;
+    border-radius: 0px 0px 10px 10px;
 }
 
 .display {
-    
+
     display: none !important;
-    
+
 }
 
 .sell-btn {
-    border-radius: 50px;
-    padding: 5px 29px;
+    border-radius: 50px !important;
+    padding: 5px 29px !important;
+    margin-right: 20px;
 }
 
 .responsiveness {
     display: flex;
     justify-content: space-around;
+}.icon-build{
+    margin-left: 20px;
 }
 
 
 
-h5{
-   margin: 40px !important;
-   font-weight: 700 !important;
-   font-size: x-large !important;
+h5 {
+    margin: 40px !important;
+    font-weight: 700 !important;
+    font-size: x-large !important;
 }
-.catigrize{
+
+.catigrize {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
-.catagri{
+
+.catagri {
     text-align: center;
     margin-left: 30px;
     width: 140px;
 }
-@media screen and (max-width: 780px) {
+.input-search{
+    padding: 4px;
+    border-radius: 10px;
+}
+/* @media screen and (max-width: 780px) {
     .input {
         display: none;
 
     }
 
-    
-  
+
+
     .responsiveness {
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
     }
-    .fa-cars , .responsive{
+
+    .fa-cars,
+    .responsive {
         display: none;
 
     }
-    
+
     .sell-btn {
         display: none;
         margin-left: 35px;
     }
+
     .fa-build {
         display: none;
     }
@@ -113,9 +120,9 @@ h5{
         flex-wrap: wrap;
 
     }
-}
+} */
 
-@media screen and (min-width: 780px) {
+/* @media screen and (min-width: 780px) {
 
     .responsiveness {
         display: flex;
@@ -157,8 +164,58 @@ h5{
         float: left;
         margin-left: 10px;
     }
+} */
+
+.olx-arrow {
+    display: flex;
+    background-color: #f7f8f8;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+}
+
+._10c831ef {
+    margin: 20px 30px;
+}
+
+.olx-logo {
+    margin: 14px 3px;
+    cursor: pointer;
+    border-radius: 50%;
+
+}
+
+.text {
+    text-align: center;
+    margin: 20px 0px;
+}.table-data{
+    display: flex;
+    justify-content: center;
+    /* text-align: center; */
+    align-items: center;
+}
+table,
+.table-data,
+.table-row {
+    border: 1px solid black !important;
+    border-collapse: collapse !important;
+    padding: 7px;
+    
+    text-align: center;
+
 }
 
 
+.table-data:hover {
+    background-color: #c8f8f6;
+}
 
+.table {
+    display: flex;
+    justify-content: center;
 
+}
+
+.table-data {
+    cursor: pointer;
+}
