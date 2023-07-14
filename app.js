@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";
-import { getAuth} from "https://www.gstatic.com/firebasejs/10.0.0/firebase-auth.js";
-import {getFirestore,collection, addDoc , getDocs } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-auth.js";
+import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore.js";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -26,157 +26,167 @@ const auth = getAuth();
 
 
 let sellBtn = document.querySelector(".sell-btn");
-if(sellBtn){
+if (sellBtn) {
 
-sellBtn.addEventListener("click", () => {
-// alert()
-let newWindow =   window.location.assign("SelectCatagri.html")
-// alert()
-// newWindow.onload(()=>{
-  
-})
-// })
+  sellBtn.addEventListener("click", () => {
+    let newWindow = window.location.assign("SelectCatagri.html")
+    // alert()
+    // newWindow.onload(()=>{
+
+  })
+  // })
 }
-else{
-let back = document.querySelector("#back");
-back.addEventListener("click",()=>{
-  history.back()
+else {
+  let back = document.querySelector("#back");
+  back.addEventListener("click", () => {
+    history.back()
 
-})
-
-//   let postCard = document.querySelector("#imgListner")
-
-//   postCard.addEventListener("click", () => {
-
-//     mainNav.style.display = "block"
-//     document.querySelector(".cra").style.display = "block"
-//     document.querySelector(".image-catagized").style.display = "block"
-//     postCard1.style.display = "none"
-//   })
-//   let mobiles = document.querySelector("#mobiles");
-
-//   mobiles.addEventListener("click", () => {
-//     // mainNav.style.display = "none"
-//     let choseCatagri = document.querySelector(".choseCatagri")
-//     choseCatagri.style.display = "none"
-//     let back = document.querySelector("#back")
-//     back.innerHTML = `
-// <img id="imgListne" class="olx-logo" height="30px" src="./images/th.jpg">
-// `
-//     let baksBaks = document.querySelector("#imgListne")
-//     console.log(baksBaks)
-//     let form = document.querySelector(".table")
-//     // form.innerHTML = `
-//     // <div class="form-mobiles">
-//     // <table><th>
-//     // INCLUDE SOME DETAILS</th>
-//     // <tr><td>Ad title
-//     // </div>
-//     // `
-//     baksBaks.addEventListener("click", () => {
-//       alert()
-      
-//       // let choseCatagris = document.querySelector(".table")
-
-//       choseCatagri.style.display = "block"
-
-//       // let formMobiles = document.querySelector(".form-mobiles");
-//       // formMobiles.style.display = "none"
-//       // console.log(formMobiles)
-//       // console.log(choseCatagri)
-//       back.innerHTML = `
-// <img id="imgListner" class="olx-logo" height="30px" src="./images/th.jpg">
-// `
-
-
-
-//       let postCard = document.querySelector("#imgListner")
-//       postCard.addEventListener("click", () => {
-
-//         mainNav.style.display = "block"
-//         document.querySelector(".cra").style.display = "block"
-//         document.querySelector(".image-catagized").style.display = "block"
-//         postCard1.style.display = "none"
-//       })
-
-//       // document.querySelector(".cra").style.display = "block"
-//       // document.querySelector(".image-catagized").style.display = "block"
-//       // postCard1.style.display = "none"
-//     })
-
-//   })
-// })
-
+  })
 
 }
 
-if(!sellBtn){
+if (!sellBtn) {
   let tableCells = document.querySelectorAll(".table-data");
 
   tableCells.forEach((cell) => {
-    
+
 
     cell.addEventListener("click", () => {
-    console.log(cell.textContent)
+      console.log(cell.textContent)
 
       let mainTable = document.querySelector(".main-table");
       mainTable.style.display = "none";
       let table = document.querySelector(".table");
       table.style.display = "unset";
       table.innerHTML = `
-        <input type="name" placeholder="Name" id="name"><br>
-        <input type="text" placeholder="Title" id="title"><br>
-        <input type="text" placeholder="Description" id="descrip"><br>
-        <input type="number" placeholder="Phone" id="phone"><br>
-        <input type="text" placeholder="Image" id="img"><br>
-        <button id="submit">submit</button>
-      `;
+      <div class="user-data">
+      <h2 class="form-head"> SELECTED CATEGORY</h2>
+      <p class="text-contant">${cell.textContent}</p>
+      <hr />
+      <h3 class="form-includ">INCLUDE SOME DETAILS</h3>
+      <div class="set-width">
+      
+      <div class="titles">
+      <div>
+      <p class="title-pra">Ad Title</p>
+        <input class="user-input title-input" type="name" placeholder="Title" id="title">
+        <p class="title-pra">Title should contain at least 5 alphanumeric characters. Please edit the field</p>
+        </div></div>
 
+
+        <div class="titles">
+       
+      <p class="title-pra">Description</p>
+      <div id="text-d" class="editable-content user-input discription-user" contenteditable="true"></div>
+      <p class="title-pra">Include condition, features and reason for selling</p>
+
+       
+        </div>
+       
+        <div class="titles">
+        <div>
+        <p class="title-pra">Mobile Phone Number</p>
+        <input class="user-input title-input" type="number" placeholder="Phone number" id="phone"><br>
+        </div></div>
+        <div class="titles">
+        <div>
+        <p class="title-pra">Brand</p>
+        <input class="user-input title-input" type="text" placeholder="Brand" id="brand"><br>
+        </div></div>
+        <div class="titles">
+        <div>
+        <p class="title-pra">Image</p>
+        <input class="user-input title-input" type="text" placeholder="Image URL" id="img"><br>
+        </div></div>
+
+        <button id="submit" class="post-btn">Post card</button></div>
+        
+        </div></div>
+      `;
+      let brand = document.querySelector('#brand')
       let submit = document.querySelector("#submit");
       let name = document.querySelector("#name");
-      let title  = document.querySelector('#title');
-      let descrip = document.querySelector('#descrip');
+      let title = document.querySelector('#title');
+      let descrip = document.querySelector('#text-d');
       let phone = document.querySelector('#phone');
       let img = document.querySelector('#img');
-      submit.addEventListener("click", async()=>{
-      let obj = {
-        name: name.value,
-        title: title.value,
-        descrips: descrip.value,
-        phones: phone.value,
-        img: img.value
-      }
-    
-    
-    
-    try {
-      const docRef = await addDoc(collection(db, cell.textContent), {
-       ...obj
-       
-      });
-      console.log("Document written with ID: ", docRef.id);
-    } catch (e) {
-      console.error("Error adding document: ", e);
-    }
-    })
-    
+      submit.addEventListener("click", async () => {
+        let obj = {
+          brand: brand.value,
+          title: title.value,
+          descrips: descrip.textContent,
+          phones: phone.value,
+          img: img.value
+        }
+        console.log(descrip.textContent)
+
+
+        try {
+          const docRef = await addDoc(collection(db, cell.textContent), {
+            ...obj
+
+          });
+          console.log("Document written with ID: ", docRef.id);
+        } catch (e) {
+          console.error("Error adding document: ", e);
+        }
+      })
+
     });
   });
 }
-
+let vahiclessSpinner = document.querySelector(".swiper-wrapper");
+vahiclessSpinner.innerHTML = `<div class="spinner-border" role="status">
+<span class="visually-hidden">Loading...</span>
+</div>`
 const querySnapshot = await getDocs(collection(db, "Vehicles"));
 querySnapshot.forEach((doc) => {
-  console.log(`${doc.id} => `,doc.data());
+  console.log(`${doc.id} => `, doc.data());
 
-let vahicless = document.querySelector(".swiper-wrapper");
-console.log(vahicless)
-vahicless.innerHTML += `
+  let vahicless = document.querySelector(".vahicle");
+  console.log(vahicless)
+  document.querySelector(".spinner-border").style.display = "none"
+  vahicless.innerHTML += `
 
            
 
                   <div class="card swiper-slide">
                         <div class="image-content">
-                        <img src="${doc.data().img}" alt="" class="card-img">
+                        <img height="240px" src="${doc.data().img}" alt="" class="card-img">
+
+                           
+
+                            
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">${doc.data().title}</h2>
+                            <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                            <button class="button">View More</button>
+                        </div>
+                  
+                   
+                   
+                
+
+
+`
+})
+const querySnapshotHouse = await getDocs(collection(db, "House"));
+querySnapshotHouse.forEach((doc) => {
+  console.log(`${doc.id} => `, doc.data());
+
+  let houses = document.querySelector(".houses");
+  // console.log(vahicless)
+  document.querySelector(".spinner-border").style.display = "none"
+  houses.innerHTML += `
+
+           
+
+                  <div class="card swiper-slide">
+                        <div class="image-content">
+                        <img height="240px" src="${doc.data().img}" alt="" class="card-img">
 
                            
 
@@ -197,7 +207,10 @@ vahicless.innerHTML += `
 
 `
 
-var swiper = new Swiper(".slide-content", {
+
+})
+
+var swiper = new Swiper(".houseget", {
   slidesPerView: 3,
   spaceBetween: 25,
   loop: true,
@@ -206,13 +219,13 @@ var swiper = new Swiper(".slide-content", {
   grabCursor: true,
   speed: 800, // Adjust the speed value as needed
   pagination: {
-    el: ".swiper-pagination",
+    el: ".swiper-pagination-house",
     clickable: true,
     dynamicBullets: true,
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".swiper-button-next-house",
+    prevEl: ".swiper-button-prev-house",
   },
   breakpoints: {
     0: {
@@ -226,16 +239,32 @@ var swiper = new Swiper(".slide-content", {
     },
   },
 });
-
-
+var swiper = new Swiper(".vahicles-get", {
+  slidesPerView: 3,
+  spaceBetween: 25,
+  loop: true,
+  centerSlide: true,
+  fade: true,
+  grabCursor: true,
+  speed: 800, // Adjust the speed value as needed
+  pagination: {
+    el: ".swiper-pagination-valhicle",
+    clickable: true,
+    dynamicBullets: true,
+  },
+  navigation: {
+    nextEl: ".button-next-valicle",
+    prevEl: ".button-prev-vahicle",
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    520: {
+      slidesPerView: 2,
+    },
+    950: {
+      slidesPerView: 3,
+    },
+  },
 });
-// const querySnapshot = await getDocs(collection(db, "user"));
-// querySnapshot.forEach((doc) => {
-//   console.log(`${doc.id} => ` 
-//   ,doc.data())
-// })
-
-
-
-
-
