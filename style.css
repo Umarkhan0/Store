@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
-
 ._5afdd59e,
 .fa-bars {
   margin: 25px;
@@ -83,6 +82,7 @@ h5 {
   padding: 4px;
   border-radius: 10px;
 }
+
 .olx-arrow {
   display: flex;
   background-color: #f7f8f8;
@@ -303,4 +303,100 @@ table,
   background-color: black;
   color: white;
   cursor: pointer;
+}
+
+.card-log {
+  /* height: 200px; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* transition: 03ms; */
+  transform: translate(-50%, -50%);
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  height: 70%;
+  overflow-y: auto;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+ 
+  width: 300px;
+}
+
+.img-log-card {
+  display: flex;
+  text-align: center;
+  margin: 0 auto;
+  height: 60px;
+  padding: 4px;
+}
+
+.well-come {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.text-log {
+  text-align: center;
+  font-size: large;
+}
+
+.continu-google-phone-email {
+  display: flex;
+  border: 1px solid black;
+  justify-self: center;
+  text-align: center;
+  margin: 0 auto;
+  cursor: pointer;
+  padding: 4px;
+  margin-top: 9px;
+  width: 225px;
+  
+}
+
+.btn-name {
+  margin-left: 6px !important;
+}
+
+.continu-google-phone-email:hover {
+  border: 4px solid black;
+}
+.cut-log{
+  height: 10px;
+}
+.cut-log{
+  display: flex;
+  justify-content: right;
+  cursor: pointer;
+}
+.log-btn{
+  margin: auto;
+  padding-right: 30px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.log-btn:hover{
+  text-decoration: none;
+}
+.back-btn-remove-btn{
+  display: flex;
+  justify-content: space-between;
+}
+.back-btn-remove-btn > span > img{
+  height: 40px;
+  background-color: #f0f0f0 !important;
+}
+.icon-log-card{
+  margin-right: 7px;
+}
+.text-log-email{
+  margin-top: 10px;
+  text-align: center;
+}
+.email-input{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 15px;
+  width: 90%;
+  height: 36px;
 }
