@@ -318,7 +318,7 @@ table,
   height: 70%;
   overflow-y: auto;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
- 
+
   width: 300px;
 }
 
@@ -350,7 +350,7 @@ table,
   padding: 4px;
   margin-top: 9px;
   width: 225px;
-  
+
 }
 
 .btn-name {
@@ -360,43 +360,75 @@ table,
 .continu-google-phone-email:hover {
   border: 4px solid black;
 }
-.cut-log{
+
+.cut-log {
   height: 10px;
 }
-.cut-log{
+
+.cut-log {
   display: flex;
   justify-content: right;
   cursor: pointer;
 }
-.log-btn{
+
+.log-btn {
   margin: auto;
   padding-right: 30px;
   text-decoration: underline;
   cursor: pointer;
 }
-.log-btn:hover{
+
+.log-btn:hover {
   text-decoration: none;
 }
-.back-btn-remove-btn{
+
+.back-btn-remove-btn {
   display: flex;
   justify-content: space-between;
 }
-.back-btn-remove-btn > span > img{
+
+.back-btn-remove-btn>span>img {
   height: 40px;
   background-color: #f0f0f0 !important;
 }
-.icon-log-card{
+
+.icon-log-card {
   margin-right: 7px;
 }
-.text-log-email{
+
+.text-log-email {
   margin-top: 10px;
   text-align: center;
 }
-.email-input{
+
+.email-input {
   display: flex;
   justify-content: center;
   margin: auto;
   margin-top: 15px;
   width: 90%;
   height: 36px;
+  outline: 1px solid palegreen;
+  border: 1px solid black;
+  padding: 2px;
+  border-radius: 4px;
+}
+
+.back-img {
+  cursor: pointer;
+}
+
+.enter-text {
+  text-align: center;
+}
+
+.log-btn-card {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 6px 23px;
+  border-radius: 8px;
 }

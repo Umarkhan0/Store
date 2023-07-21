@@ -268,6 +268,7 @@ let logBtn = document.querySelector(".log-btn")
 let cardPrint = document.querySelector(".log-card-print")
 logBtn.addEventListener("click", () => {
   cardPrint.innerHTML = ` <div class="card-log">
+  <div class="log-inputs-add"></div>
   <div class="cardlog1">
   <span class="cut-log"><svg width="25" height="25" fill-rule="evenodd" data-aut-id="icon" viewBox="0 0 1024 1024"><path d="M878.3 85.3L512 451.6 145.7 85.3H85.3v60.4L451.7 512 85.3 878.3v60.4h60.4L512 572.3l366.3 366.4h60.4v-60.4L572.4 512l366.3-366.3V85.3z" class="rui-22SD7"></path></svg></span>
   <img class="img-log-card" src="https://www.olx.com.pk/assets/brandIconLogin_noinline.93e8a1a9cf50902ba5250814f57810ff.svg">
@@ -275,37 +276,44 @@ logBtn.addEventListener("click", () => {
   <p class="text-log">The trusted community of buyers and sellers.</p>
 <button class="carass continu-google-phone-email"><img class="img1 icon-log-card" src="	https://www.olx.com.pk/assets/iconGoogleLogin_noinline.633b1f5afb5219bedca01d2367642a28.svg">Continu with google</button>
 <button class="continu-google-phone-email carass2"><img class=" icon-log-card btns img2" src="	https://www.olx.com.pk/assets/iconFacebookLogin_noinline.70f71af03bbf63ca01a044ff5c5eb342.svg">Continu with Facebook</button>
-<button class="continu-google-phone-email carass3 google"><img class="icon-log-card img3" src="	https://www.olx.com.pk/assets/iconMailLogin_noinline.248b2cbda65d833f5f8f87f18a346cc9.svg"> 	Continu with Email</button>
+<button class="continu-google-phone-email carass3 google">
+<img class="icon-log-card img3" src="	https://www.olx.com.pk/assets/iconMailLogin_noinline.248b2cbda65d833f5f8f87f18a346cc9.svg"> 	Continu with Email</button>
 </div></div></div>
 `
-  let cardLogRemove = document.querySelector(".card-log")
+  let cardLogRemove = document.querySelector(".log-inputs-add")
   let cardLog1 = document.querySelector(".cardlog1");
   let continuGooglePhoneEmail3 = document.querySelector(".carass3")
   let google = document.querySelector(".google");
-
   google.addEventListener("click", () => {
     cardLog1.style.display = "none"
-cardLogRemove.innerHTML=`
+    cardLogRemove.innerHTML = `
+   
+<div class="log-back">
 <div class="back-btn-remove-btn">
-<span><img src="images/4780026.png" alt="back"></span>
+<span ><img class="back-img back" src="images/4780026.png" alt="back"></span>
 <span class="cut-log"><svg width="25" height="25" fill-rule="evenodd" data-aut-id="icon" viewBox="0 0 1024 1024"><path d="M878.3 85.3L512 451.6 145.7 85.3H85.3v60.4L451.7 512 85.3 878.3v60.4h60.4L512 572.3l366.3 366.4h60.4v-60.4L572.4 512l366.3-366.3V85.3z" class="rui-22SD7"></path></svg></span></div>
 <img class="img-log-card" src="https://www.olx.com.pk/assets/brandIconLogin_noinline.93e8a1a9cf50902ba5250814f57810ff.svg">
 <p class="text-log mt-3">Enter your Email</p>
-<input class="email-input" type="text">
-<p class="text-l mt-3">Enter your Email</p>
-<input class="email-input" type="text">
-<button class="log-btn">Log in</button>
+<input class="email-input email-input-log" type="email" placeholder="Enter your Email">
+<p class="text-l mt-3 enter-text">Enter your Password</p>
+<input class="email-input password-input" type="password" placeholder="Enter your password">
+<button class="log-btn-card log-btn-email">Log in</button>
+</div>
 `
-
-document.addEventListener("click", (event) => {
-  
-})
+    let cardLog2 = document.querySelector(".cardlog1");
+    let logBack = document.querySelector(".log-back")
+    let backHome = document.querySelector(".back");
+    backHome.addEventListener("click", () => {
+      body.style.overflow = "hidden";
+      logBack.style.display = "none"
+      cardLog1.style.display = "block";
+      console.log(cardLog1)
+    })
   })
-// })
+  // })
   let body = document.querySelector(".body");
   body.style.overflow = "hidden";
   document.addEventListener("click", (event) => {
-    console.log(event.target)
     let imgLogCard = document.querySelector(".img-log-card");
     let well = document.querySelector(".well-come");
     let textCota = document.querySelector(".text-log");
@@ -318,15 +326,24 @@ document.addEventListener("click", (event) => {
     let img1 = document.querySelector(".img1")
     let img2 = document.querySelector(".img2")
     let img3 = document.querySelector(".img3")
-    let logBtnEmail = document.querySelector(".email-input");
-    let emailInput = document.querySelector(".log-btn")
+    let passwordInput = document.querySelector(".password-input")
+    let logBtnEmail = document.querySelector(".email-input-log");
+    let logInBtn = document.querySelector(".log-btn-email")
+    let enterText = document.querySelector(".enter-text")
+    let backImg = document.querySelector(".back-img");
+    let logBack = document.querySelector(".log-back")
+    let cardLog = document.querySelector(".card-log")
     if (event.target !== cardLogRemove && event.target != logBtn &&
       event.target != cardPrint && event.target != imgLogCard && event.target != textCota && event.target != well &&
       event.target != continuGooglePhoneEmail && event.target != continuGooglePhoneEmail2 &&
       event.target != continu && event.target !== text1 && event.target != text2 && event.target != img1 && event.target !=
-      img2 && event.target != img3 && event.target !== text3 && event.target != continuGooglePhoneEmail3  ) {
+      img2 && event.target != img3 && event.target !== text3 && event.target != continuGooglePhoneEmail3 && event.target !== logBtnEmail && event.target !== logInBtn
+      && event.target !== passwordInput && event.target != enterText && event.target != backImg && event.target !== logBack) {
       body.style.overflow = "auto";
-      cardLogRemove.style.display = "none";
+      cardPrint.style.display = "none"
+
+    } else {
+      cardPrint.style.display = "block"
     }
   });
   console.log()
